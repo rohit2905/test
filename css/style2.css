@@ -1,0 +1,97 @@
+main {
+	background-color: #27384f;
+}
+.topgrid h1{
+	color:#e0d207
+}
+.topgrid p{
+	color:#bdbd99;
+}
+
+.col{
+	border:2px solid;
+	border-color:#e0d207; 
+	height: 210%;	
+	margin: 15px;
+	margin-bottom: 35px;
+	background-color: lightyellow;
+	
+}
+.topgrid{
+	padding: 50px;
+	margin-bottom:  35px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.3em;
+}
+.col a::before{
+	content: "-> "
+}
+
+/*@media query
+*/
+@media (max-width: 1024px)
+{
+	body{
+		background-size: contain;
+	}
+}
+/* Nesting SCSS Property */
+nav div a {
+  background-color: #001f4a;
+}
+
+/* Extend/Inheritance SCSS Property 
+	https://sass-lang.com/guide#topic-7
+*/
+.nav-item {
+  color: coral;
+}
+
+.container_me h1{
+	text-align: center;
+	color: #0bb321;
+	font-family: monospace;, sans-serif;
+	font-size: 3rem;
+}
+.container_me h3{
+	text-align: center;
+	color: #d4cd19;
+	font-family: monospace;, sans-serif;
+	font-size: 1.5rem;
+}
+.container_me p {
+	color:#bdbd99;
+	text-align: center;
+	font-size: 1.25em;
+}
+.container_me hr {
+  border-top: 1px solid #d79921 !important;
+}
+.container_me ul{
+	text-align: center;
+  list-style-position: inside;
+
+}
+.container_me li{
+	font-family: 'Poppins', sans-serif;
+	font-size: 2rem;
+}
+
+
+/* table */
+#t1{
+	background-color: green;
+	color:white	;
+	border:2px solid black ;
+}
+td{
+	padding: 10px;
+	font-family: monospace,sans-serif;
+	color:red;;
+	border:2px solid black;
+}
+table{
+	border:1px solid ;
+	padding: 10px;
+	margin: 10px;
+}

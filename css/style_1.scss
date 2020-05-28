@@ -1,0 +1,181 @@
+/*
+Gruvbox Color Codes
+*/
+
+$gv_bg: #282828;
+$gv_fg: #ebdbb2;
+$gv_bg0: #1d2021;
+$gv_fg0: #fbf1c7;
+$gv_red: #cc241d;
+$gv_green: #98971a;
+$gv_yellow: #d79921;
+$gv_blue: #458588;
+$gv_purple: #b16286;
+$gv_aqua: #689d6a;
+$gv_gray: #a89984;
+$gv_gray_h: #928374;
+$gv_red_h: #fb4934;
+$gv_green_h: #b8bb26;
+$gv_yellow_h: #fabd2f;
+$gv_blue_h: #83a598;
+$gv_purple_h: #d3869b;
+$gv_aqua_h: #8ec07c;
+
+body {
+	font-family: 'Inconsolata', monospace !important;
+	font-size: 100% !important; 
+	background-color: $gv_bg !important;
+	color: $gv_fg !important;
+	min-height: 100%;
+}
+
+@media (max-width: 767.98px) {
+	body {
+		font-size: 120% !important;
+	}
+	#menu_logo {
+		width: 50px !important;
+		height: 50px !important;
+	}
+	.fullwidth {
+		display: none;
+	}
+}
+
+#menu_logo {
+	width: 35px;
+	height: 35px;
+}
+
+::selection {
+	background-color: $gv_red;
+	color: $gv_fg0;
+}
+::-moz-selection {
+	background-color: $gv_red;
+	color: $gv_fg0;
+}
+
+hr {
+	border-top: 1px solid $gv_yellow !important;
+}
+
+.crazyimportant {
+	background-color: $gv_red;
+	color: $gv_fg0;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+/*
+Header and Footer
+*/
+
+header, footer {
+	background-color: $gv_bg0;
+	font-size: 1.2em;
+	a {
+		color: $gv_fg;
+	}
+	a:hover {
+		color: $gv_fg0;
+	}
+	.active {
+		color: $gv_yellow !important;
+		font-weight: 700;
+	}
+	.active:hover {
+		color: $gv_yellow_h !important;
+	}
+}
+
+.navbar-toggler {
+		background-color: $gv_bg !important;
+}
+
+/*
+Main Content
+*/
+
+main {
+	p {
+		padding-top: 0.5em;
+	}
+	a {
+		color: $gv_blue_h;
+	}
+	a:hover {
+		color: $gv_blue;
+	}
+	a::before {
+		content: "\2192\2009";	
+	}
+	@mixin headings {
+		font-family: 'Crimson Text', serif;
+		font-weight: 400;
+		color: $gv_aqua;
+	}
+	h1 {
+		@include headings;
+		font-size: 2.5em;
+		padding-top: 1em;
+	}
+	h2 {
+		@include headings;
+		font-size: 2em;
+	}
+	h3 {
+		@include headings;
+		font-size: 1.5em;
+	}
+	h4 {
+		@include headings;
+		font-size: 1em;
+	}
+	h5 {
+		@include headings;
+		font-size: 0.83em;
+	}
+	h6 {
+		@include headings;
+		font-size: 0.75em;
+	}
+	.fullwidth {
+		width: 100%;
+		height: 100%;
+	}
+	%yellowborder {
+		border: 1px solid $gv_yellow; 
+	}
+	.card {
+		@extend %yellowborder;
+		background-color: $gv_bg;
+	}
+	.cardcompleted {
+		@extend %yellowborder;
+		background-color: $gv_bg0 !important;
+	}
+	.table-bordered {
+		@extend %yellowborder;
+		color: $gv_fg;
+		p {
+			color: $gv_fg;
+		}
+		ul {
+			color: $gv_fg;
+		}
+		th {
+			@extend %yellowborder;
+		}
+		td {
+			@extend %yellowborder;
+		}
+	}
+	th {
+		border-bottom: none !important;
+	}
+}
+
+li > a::before {
+	content: "";
+}
